@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빗소리 시계</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+</head>
+<body onload="run()">
+  <div class="image-container">
+    <img src="./img/wallpaper.jpg" alt="" id="wallpaper">
+
+    <div id="clock">
+      <div id="today" class="today"></div>
+      <div id="time" class="time"></div>
+    </div>
+
+    <div id="btn">
+      <button class="play on" onclick="playAudio()"><i class="fa-regular fa-circle-play"></i></button>
+      <button class="pause" onclick="playAudio()"><i class="fa-regular fa-circle-pause"></i></i></button>
+      <input type="range" oninput="setVolume(this.value)" onchange="setVolume(this.value)" min="0" max="1" step="0.01" value="0.5">
+    </div>
+
+    <audio id="audio" loop="loop">
+      <source src="./audio/rain.mp4" type="audio/mp4">
+      <source src="./audio/rain.ogg" type="audio/ogg">
+      <source src="./audio/rain.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rainyday.js/0.1.2/rainyday.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

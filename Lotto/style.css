@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'CookieRun-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/CookieRun-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'CookieRun-Regular';
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  width: 680px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+#container > .title {
+  margin: 20px 0;
+}
+
+#container > .num-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+#container > .num-list > div {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background-color: #fafafa;
+}
+
+#container > .num-list > div.selected {
+  background-color: yellow;
+}
+
+#container > .num-list > .ing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 22px;
+  background-color: #00000090;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+
+#container > .num-list > .ing.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+#container > .lotto-btn {
+  width: 160px;
+  height: 60px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#container > #result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 80px;
+  margin-top: 40px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+
+#container > #result.on {
+  visibility: visible;
+  opacity: 1;
+}
+
+#container > #result > div {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}

@@ -6,7 +6,7 @@ function run() {
   const rainyDay = new RainyDay({
     image: img,
     gravityAngle: Math.PI / 5,
-    fps: 40,
+    fps: 144,
   })
 
   rainyDay.rain(
